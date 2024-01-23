@@ -1,3 +1,4 @@
+<?php include("path.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -17,41 +18,16 @@
 		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora&display=swap" rel="stylesheet">
 
 		<!-- Custom Styling -->
-		<link rel="stylesheet" href="css/mainstyle.css">
+		<link rel="stylesheet" href="assets/css/mainstyle.css">
 
 		<title>Blog</title>
 	</head>
 	
+	
 	<body>
 		
-		<header class = "banner">
-			<div class="logo">
-				<h1 class="logo-text"><a href="index.html"> <span>TD</span>Lange </a></h1>
-			</div>
-			<i class="fa fa-bars menu-toggle"></i> 
-			<nav>
-				<ul class="nav">
-					<li><a href="index.html">Main Page</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="pastposts.html">Past Posts</a></li>
-					<!--<li><a href="#">Sign Up</a></li>
-					<li><a href="#">Login</a></li> -->
-					<li>
-						<a href="#">
-							<i class="fa fa-user"></i>
-							Tristan de Lange
-							<i class="fa fa-chevron-down"></i>
-						</a>
-						<ul> 
-							<li><a href="#">Dashboard</a></li>
-							<li><a href="#" class="logout">Logout</a></li>
-						</ul>	
-					</li>
-				</ul>
-			</nav>
-
-		</header>
+		<!-- Header Include -->
+		<?php include(ROOT_PATH . "/app/includes/header.php"); ?>
 
 		<!--Page Wrapper-->
 		<div class="page-wrapper"> 
@@ -66,9 +42,9 @@
 				<div class="post-wrapper">
 					
 					<div class="post ">
-						<img src="images/programming_meme.jpg" alt="" class="slider-image">
+						<img src="assets/images/programming_meme.jpg" alt="" class="slider-image">
 						<div class="post-info">
-							<h4><a href="single.html">Programming Memes for People with no dreams</a></h4>
+							<h4><a href="single.php">Programming Memes for People with no dreams</a></h4>
 							<i class="far fa-user"><span class ="post-sub">Tristan de Lange</span></i>
 							&nbsp;
 							<i class="far fa-calendar"><span class ="post-sub">Jan 1, 2024</span></i>
@@ -76,9 +52,9 @@
 					</div>
 
 					<div class="post ">
-						<img src="images/programming_meme.jpg" alt="" class="slider-image">
+						<img src="assets/images/programming_meme.jpg" alt="" class="slider-image">
 						<div class="post-info">
-							<h4><a href="single.html">Programming Memes for People with no dreams</a></h4>
+							<h4><a href="single.php">Programming Memes for People with no dreams</a></h4>
 							<i class="far fa-user"><span class ="post-sub">Tristan de Lange</span></i>
 							&nbsp;
 							<i class="far fa-calendar"><span class ="post-sub">Jan 1, 2024</span></i>
@@ -86,9 +62,9 @@
 					</div>
 
 					<div class="post ">
-						<img src="images/programming_meme.jpg" alt="" class="slider-image">
+						<img src="assets/images/programming_meme.jpg" alt="" class="slider-image">
 						<div class="post-info">
-							<h4><a href="single.html">Programming Memes for People with no dreams</a></h4>
+							<h4><a href="single.php">Programming Memes for People with no dreams</a></h4>
 							<i class="far fa-user"><span class ="post-sub">Tristan de Lange</span></i>
 							&nbsp;
 							<i class="far fa-calendar"><span class ="post-sub">Jan 1, 2024</span></i>
@@ -96,9 +72,9 @@
 					</div>
 
 					<div class="post ">
-						<img src="images/programming_meme.jpg" alt="" class="slider-image">
+						<img src="assets/images/programming_meme.jpg" alt="" class="slider-image">
 						<div class="post-info">
-							<h4><a href="single.html">Programming Memes for People with no dreams</a></h4>
+							<h4><a href="single.php">Programming Memes for People with no dreams</a></h4>
 							<i class="far fa-user"><span class ="post-sub">Tristan de Lange</span></i>
 							&nbsp;
 							<i class="far fa-calendar"><span class ="post-sub">Jan 1, 2024</span></i>
@@ -106,9 +82,9 @@
 					</div>
 
 					<div class="post">
-						<img src="images/programming_meme.jpg" alt="" class="slider-image">
+						<img src="assets/images/programming_meme.jpg" alt="" class="slider-image">
 						<div class="post-info">
-							<h4><a href="single.html">Programming Memes for People with no dreams</a></h4>
+							<h4><a href="single.php">Programming Memes for People with no dreams</a></h4>
 							<i class="far fa-user"><span class ="post-sub">Tristan de Lange</span></i>
 							&nbsp;
 							<i class="far fa-calendar"><span class ="post-sub">Jan 1, 2024</span></i>
@@ -127,54 +103,54 @@
 					<h1 class="recent-post-title">Recent Posts</h1> 
 					
 					<div class="post clearfix">
-						<img src="images/image2.png" alt="" class="post-image">
+						<img src="assets/images/image2.png" alt="" class="post-image">
 						<div class = "post-preview">
-							<h2><a href="single.html">Yet another meme for you heathens</a></h2>
+							<h2><a href="single.php">Yet another meme for you heathens</a></h2>
 							<i class="far fa-user"> <span class ="post-sub">Tristan de Lange</span> </i>
 							&nbsp;
 							<i class="far calender"><span class ="post-sub"> Jan 2, 2024</span></i>
 							<p class="preview-text">Random bullshittttt oh yes more random bullshit, you know how I dearly love random bullshit, all the random bullshit in the wooooooorld
 							</p>
-							<a href="single.html" class="read-more btn">Read More</a>
+							<a href="single.php" class="read-more btn">Read More</a>
 						</div>
 					</div>
 					
 					<div class="post clearfix">
-						<img src="images/image2.png" alt="" class="post-image">
+						<img src="assets/images/image2.png" alt="" class="post-image">
 						<div class = "post-preview">
-							<h2><a href="single.html">Yet another meme for you heathens</a></h2>
+							<h2><a href="single.php">Yet another meme for you heathens</a></h2>
 							<i class="far fa-user"> <span class ="post-sub">Tristan de Lange</span> </i>
 							&nbsp;
 							<i class="far calender"><span class ="post-sub"> Jan 2, 2024</span></i>
 							<p class="preview-text">Random bullshittttt oh yes more random bullshit, you know how I dearly love random bullshit, all the random bullshit in the wooooooorld
 							</p>
-							<a href="single.html" class="read-more btn">Read More</a>
+							<a href="single.php" class="read-more btn">Read More</a>
 						</div>
 					</div>
 				
 					<div class="post clearfix">
-						<img src="images/image2.png" alt="" class="post-image">
+						<img src="assets/images/image2.png" alt="" class="post-image">
 						<div class = "post-preview">
-							<h2><a href="single.html">Yet another meme for you heathens</a></h2>
+							<h2><a href="single.php">Yet another meme for you heathens</a></h2>
 							<i class="far fa-user"> <span class ="post-sub">Tristan de Lange</span> </i>
 							&nbsp;
 							<i class="far calender"><span class ="post-sub"> Jan 2, 2024</span></i>
 							<p class="preview-text">Random bullshittttt oh yes more random bullshit, you know how I dearly love random bullshit, all the random bullshit in the wooooooorld
 							</p>
-							<a href="single.html" class="read-more btn">Read More</a>
+							<a href="single.php" class="read-more btn">Read More</a>
 						</div>
 					</div>
 				
 					<div class="post clearfix">
-						<img src="images/image2.png" alt="" class="post-image">
+						<img src="assets/images/image2.png" alt="" class="post-image">
 						<div class = "post-preview">
-							<h2><a href="single.html">Yet another meme for you heathens</a></h2>
+							<h2><a href="single.php">Yet another meme for you heathens</a></h2>
 							<i class="far fa-user"> <span class ="post-sub">Tristan de Lange</span> </i>
 							&nbsp;
 							<i class="far calender"><span class ="post-sub"> Jan 2, 2024</span></i>
 							<p class="preview-text">Random bullshittttt oh yes more random bullshit, you know how I dearly love random bullshit, all the random bullshit in the wooooooorld
 							</p>
-							<a href="single.html" class="read-more btn">Read More</a>
+							<a href="single.php" class="read-more btn">Read More</a>
 						</div>
 					</div>
 				</div>	
@@ -185,7 +161,7 @@
 								
 					<div class="section search">
 						<h2 class="search-title">search</h2>
-						<form action="index.html" method="post">
+						<form action="index.php" method="post">
 							<input type="text" name="seach-term" class="text-input" placeholder="Search...">
 						</form>
 					</div>
@@ -212,44 +188,8 @@
 		<!--// Page Wrapper-->
 		
 
-		<!-- Footer -->
-		<footer class="footer">
-			<div class="footer-content">
-				<div class="footer-section about">
-					<h1 class="logo-text"><span>TD</span>Lange</h1>
-					<p>
-						TDLange is a blog and portfolio website made by Tristan de Lange. I'll be posting about my travels, game development(both mine and others), interviews with other indie developers, and whatever else catches my interest.
-					</p>
-					<div class="contact">
-						<span><i class="fas fa-phone"></i> &nbsp;718-839-0596</span>
-						<span><i class="fas fa-envelope"></i>&nbsp;tristangdelange@gmail.com</span>
-					</div>
-					<div class="socials">
-						<a href="#"><i class="fab fa-instagram"></i></a>
-						<a href="#"><i class="fab fa-youtube"></i></a>
-						<a href="#"><i class="fab fa-linkedin"></i></a>
-					</div>
-				</div>
-				<div class="footer-section contact-form">
-					<h2>Contact Me!</h2>
-					<br>
-					<form action="index.html" method="post">
-						<input type="email" name="email" class="text-input contact-input" placeholder="Your Email">
-						<textarea rows = "4" name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
-						<button type="submit" class="btn btn-big contact-btn">
-							<i class="fas fa-envelope"></i>
-							Send
-						</button>
-					</form>
-				</div>	
-			</div>
-
-
-			<div class="footer-bottom">
-				&copy; Designed by Tristan de Lange
-			</div>
-		</footer>
-		<!-- // Footer -->
+		<!-- Footer Include -->
+		<?php include(ROOT_PATH . "/app/includes/footer.php"); ?>
 
 
 
@@ -260,7 +200,7 @@
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 		<!-- Custom Script -->
-		<script src = "js/scripts.js"></script>
+		<script src = "assets/js/scripts.js"></script>
 
 
 	</body>
