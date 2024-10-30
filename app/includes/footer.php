@@ -4,7 +4,7 @@
 				<div class="footer-section about">
 					<h1 class="logo-text"><span>TD</span>Lange</h1>
 					<p>
-						TDLange is a blog and portfolio website made by Tristan de Lange. I'll be posting about my travels, game development(both mine and others), interviews with other indie developers, and whatever else catches my interest.
+						TDLange is a blog and portfolio website made by Tristan de Lange. I'll be posting about my travels, game development(both mine and others), interviews with other indie developers, and whatever else catches my interest. I plan to update this site, add more functionality, and just make it look better over time.
 					</p>
 					<div class="contact">
 						<span><i class="fas fa-phone"></i> &nbsp;718-839-0596</span>

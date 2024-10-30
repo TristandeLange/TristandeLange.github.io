@@ -1,18 +1,5 @@
 <?php include("path.php") ?>
 <?php include(ROOT_PATH . '/app/controllers/posts.php'); 
-include(ROOT_PATH . '/app/controllers/comments.php'); 
-
-if(isset($_GET['id']))
-{
-	$post = selectOne('posts', ['id' => $_GET['id']]);
-}
-
-$topics = selectAll('topics');
-$posts = selectAll('posts', ['published' => 1]);
-
-
-$commentSection = getComments($_GET['id']);
-
 
 ?>
 <!DOCTYPE html>
@@ -36,7 +23,7 @@ $commentSection = getComments($_GET['id']);
 		<!-- Custom Styling -->
 		<link rel="stylesheet" href="assets/css/mainstyle.css">
 
-		<title><?php echo $post['title']; ?> TDLange</title>
+		<title>HonoWitch TDLange</title>
 	</head>
 	
 	<body>
@@ -52,41 +39,17 @@ $commentSection = getComments($_GET['id']);
 				
 				<!-- Main Content Wrapper -->
 				<div class="main-content-wrapper">
-					<div class="main-content single">
-						<h1 class="post-title"><?php echo $post['title']; ?></h1>
+					<div class="main-content">
+						<h1 class="post-title"> Honowitch - VientoVerse </h1>
 						<div class = "post-content">
-							<?php echo html_entity_decode($post['body']); ?>
+							
 						</div>
-
-						<div class="comment-section-wrapper">
-							
-							<h2> Comments </h3>
-
-							<?php include(ROOT_PATH . "/app/includes/commentSection.php"); ?>
-
-							
-
-							<?php foreach ($commentSection as $comment): ?>
-								<div class="comment-box">
-									<p><?php echo $comment['uid']; ?> </p>
-									<p><?php echo $comment['date']; ?></p>
-									<p><?php echo $comment['message']; ?></p>			
-								</div>
-							<?php endforeach; ?>
-
-					    </div>
-					
-					</div>
-					
-					
-
+					</div>	
 				</div>
-
-
 				<!-- // Main Content -->
 
 				<!-- Sidebar -->
-				<div class="sidebar single">
+				<div class="sidebar">
 
 					<div class="section insta">
 						<h2 class="section-title">Instagram Posts</h2>
@@ -119,9 +82,7 @@ $commentSection = getComments($_GET['id']);
 						<h2 class="section-title">Topics</h2>
 						<ul>
 							<?php foreach ($topics as $key => $topic): ?>
-								<li>
-								    <a href="<?php echo BASE_URL . '/index.php?t_id=' . $topic['ID'] . '&name=' . $topic['name'];?>>"<?php echo $topic['name']; ?>"><?php echo $topic['name']; ?></a>
-							    </li>
+								<li><a href="<?php echo BASE_URL . '/index.php?t_id=' . $topic['ID'] . '&name=' . $topic['name'];?>><?php echo $topic['name']; ?>"><?php echo $topic['name']; ?></a></li>
 							<?php endforeach; ?>
 						</ul>
 					</div>
@@ -138,17 +99,21 @@ $commentSection = getComments($_GET['id']);
 		<!--// Page Wrapper-->
 		
 
-		<!-- Footer Include -->
-		<?php include("app/includes/footer.php"); ?>
+		<!-- Header Include -->
+		<?php include(ROOT_PATH . "/app/includes/header.php"); ?>
+
+
 
 		<!-- JQuery -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-		<!-- Slick Carousel -->
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
 		<!-- Custom Script -->
-		<script src = "assets/js/scripts.js"></script>
-		
+		<script src = "js/scripts.js"></script>
+
+		<!-- Script for insta -->
+		<script src="https://w.behold.so/widget.js" type="module"></script>
+
+
 	</body>
+
 </html>
